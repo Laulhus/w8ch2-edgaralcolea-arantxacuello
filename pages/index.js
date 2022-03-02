@@ -4,22 +4,23 @@ import { useEffect, useState } from "react";
 import TuitCard from "../components/tuitCard/TuitCard";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ tuits }) {
+const Home = ({ tuits }) => {
   return (
     <>
       <ul>
         {tuits.map((tuit) => (
-          <TuitCard key={tuit.id} />
+          <TuitCard key={tuit.id} tuit={tuit} />
         ))}
       </ul>
     </>
   );
-}
+};
 
 export const getServerSideProps = async () => {
   const response = await fetch(process.env.NEXT_PUBLIC_API);
-
   const tuits = await response.json();
 
-  return { props: { tuits } };
+  return { props: tuits };
 };
+
+export default Home;
