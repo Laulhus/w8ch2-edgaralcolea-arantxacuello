@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import TuitCard from "../components/tuitCard/TuitCard";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ tuits }) {
@@ -8,7 +9,7 @@ export default function Home({ tuits }) {
     <>
       <ul>
         {tuits.map((tuit) => (
-          <TuitCard key={tuit.name} tuit={tuit} />
+          <TuitCard key={tuit.id} />
         ))}
       </ul>
     </>
@@ -18,7 +19,7 @@ export default function Home({ tuits }) {
 export const getServerSideProps = async () => {
   const response = await fetch(process.env.NEXT_PUBLIC_API);
 
-  const tuitAPI = await response.json();
-  const tuits = tuitAPI.results;
+  const tuits = await response.json();
+
   return { props: { tuits } };
 };
