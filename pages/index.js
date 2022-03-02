@@ -8,7 +8,7 @@ const Home = ({ tuits }) => {
   return (
     <>
       <ul className="container">
-        {tuits.map((tuit) => (
+        {tuits.reverse().map((tuit) => (
           <TuitCard key={tuit.id} tuit={tuit} />
         ))}
       </ul>
