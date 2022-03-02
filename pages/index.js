@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import TuitCard from "../components/tuitCard/TuitCard";
 import styles from "../styles/Home.module.css";
 
-
 const Home = ({ tuits }) => {
   return (
     <>
-      <ul>
+      <ul className="container">
         {tuits.map((tuit) => (
           <TuitCard key={tuit.id} tuit={tuit} />
         ))}
@@ -25,4 +24,3 @@ export const getServerSideProps = async () => {
 };
 
 export default Home;
-
