@@ -1,4 +1,6 @@
+
 import deleteTuit from "../../utils/deleteTuit";
+
 
 const TuitCard = ({ tuit }) => {
   const calcDate = (date) => {
