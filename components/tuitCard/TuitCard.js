@@ -1,4 +1,4 @@
-const TuitCard = ({ tuit }) => {
+const TuitCard = ({ tuit: { onDelete, _id, text, like, date } }) => {
   const onClickDelete = () => {
     onDelete(_id);
   };
@@ -11,11 +11,13 @@ const TuitCard = ({ tuit }) => {
   return (
     <>
       <li className="list">
+
         <h4>Alguien dice: </h4>
         <p>{tuit.text}</p>
         <div>
           <p>{tuit.like}</p>
           <p>{`Posted ${calcDate(tuit.date)} minutes ago.`}</p>
+
         </div>
         <button onClick={onClickDelete}>Delete</button>
       </li>
