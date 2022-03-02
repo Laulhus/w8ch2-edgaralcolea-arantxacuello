@@ -5,11 +5,16 @@ import TuitCard from "../components/tuitCard/TuitCard";
 import styles from "../styles/Home.module.css";
 
 const Home = ({ tuits }) => {
+  const deleteTuit = (id) => {};
   return (
     <>
       <ul className="container">
         {tuits.map((tuit) => (
-          <TuitCard key={tuit.id} tuit={tuit} />
+          <TuitCard
+            key={tuit.id}
+            tuit={tuit}
+            onDelete={() => deleteTuit(tuit._id)}
+          />
         ))}
       </ul>
     </>
