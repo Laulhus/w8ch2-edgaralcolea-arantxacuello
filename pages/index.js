@@ -1,18 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import TuitCard from "../components/tuitCard/TuitCard";
-import styles from "../styles/Home.module.css";
 
 const Home = ({ tuits }) => {
-  const deleteTuit = (id) => {};
   return (
     <>
       <ul className="container">
-
         {tuits.reverse().map((tuit) => (
           <TuitCard key={tuit.id} tuit={tuit} />
-
         ))}
       </ul>
     </>
