@@ -1,12 +1,15 @@
-const TuitCard = ({ tuit: date, onDelete, _id }) => {
+const TuitCard = ({ tuit }) => {
   const onClickDelete = () => {
     onDelete(_id);
   };
   return (
     <>
       <li>
+        <h4>Tuit del usuario: {tuit.id}</h4>
+        <p>{tuit.text}</p>
         <div>
-          <p>Date: {date}</p>
+          <p>{tuit.like}</p>
+          <p>{tuit.date}</p>
         </div>
         <button onClick={onClickDelete}>Delete</button>
       </li>
