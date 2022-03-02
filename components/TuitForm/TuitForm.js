@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
-
 const TuitForm = () => {
   const [tuit, setTuit] = useState({ text: "", likes: 0 });
 
@@ -10,8 +8,6 @@ const TuitForm = () => {
   const changeTuit = (event) => {
     setTuit({ ...tuit, text: event.target.value });
   };
-
-  const navigate = useNavigate();
 
   const submitTuit = (event) => {
     event.preventDefault();
