@@ -4,7 +4,7 @@ const TuitCard = ({ tuit }) => {
   };
   return (
     <>
-      <li>
+      <li className="list">
         <h4>Tuit del usuario: {tuit.id}</h4>
         <p>{tuit.text}</p>
         <div>
