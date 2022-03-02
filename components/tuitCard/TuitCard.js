@@ -2,14 +2,22 @@ const TuitCard = ({ tuit: { onDelete, _id, text, like, date } }) => {
   const onClickDelete = () => {
     onDelete(_id);
   };
+
+  const calcDate = (date) => {
+    let difference = Math.abs(new Date(date) - Date.now());
+    return Math.floor(difference / 1000 / 60);
+  };
+
   return (
     <>
       <li className="list">
-        <h4>Tuit del usuario: {_id}</h4>
-        <p>{text}</p>
+
+        <h4>Alguien dice: </h4>
+        <p>{tuit.text}</p>
         <div>
-          <p>{like}</p>
-          <p>{date}</p>
+          <p>{tuit.like}</p>
+          <p>{`Posted ${calcDate(tuit.date)} minutes ago.`}</p>
+
         </div>
         <button onClick={onClickDelete}>Delete</button>
       </li>

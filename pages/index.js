@@ -9,12 +9,10 @@ const Home = ({ tuits }) => {
   return (
     <>
       <ul className="container">
-        {tuits.map((tuit) => (
-          <TuitCard
-            key={tuit.id}
-            tuit={tuit}
-            onDelete={() => deleteTuit(tuit._id)}
-          />
+
+        {tuits.reverse().map((tuit) => (
+          <TuitCard key={tuit.id} tuit={tuit} />
+
         ))}
       </ul>
     </>
