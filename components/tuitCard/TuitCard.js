@@ -1,6 +1,4 @@
-
 import deleteTuit from "../../utils/deleteTuit";
-
 
 const TuitCard = ({ tuit }) => {
   const calcDate = (date) => {
@@ -14,7 +12,7 @@ const TuitCard = ({ tuit }) => {
         <h4>Alguien dice: </h4>
         <p>{tuit.text}</p>
         <div>
-          <p>{tuit.like}</p>
+          <p>{`Liked ${tuit.likes} times`}</p>
           <p>{`Posted ${calcDate(tuit.date)} minutes ago.`}</p>
         </div>
         <button onClick={() => deleteTuit(tuit.id)}>Delete</button>
