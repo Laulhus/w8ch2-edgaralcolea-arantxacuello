@@ -1,11 +1,18 @@
 import TuitCard from "../components/tuitCard/TuitCard";
+import deleteTuit from "../utils/deleteTuit";
+import likeTuit from "../utils/likeTuit";
 
 const Home = ({ tuits }) => {
   return (
     <>
       <ul className="container">
         {tuits.reverse().map((tuit) => (
-          <TuitCard key={tuit.id} tuit={tuit} />
+          <TuitCard
+            key={tuit.id}
+            tuit={tuit}
+            likeTuit={likeTuit}
+            deleteTuit={deleteTuit}
+          />
         ))}
       </ul>
     </>

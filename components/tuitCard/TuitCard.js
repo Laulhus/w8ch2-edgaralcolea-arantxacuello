@@ -1,7 +1,4 @@
-import deleteTuit from "../../utils/deleteTuit";
-import likeTuit from "../../utils/likeTuit";
-
-const TuitCard = ({ tuit }) => {
+const TuitCard = ({ tuit, likeTuit, deleteTuit }) => {
   const calcDate = (date) => {
     let difference = Math.abs(new Date(date) - Date.now());
     return Math.floor(difference / 1000 / 60);
