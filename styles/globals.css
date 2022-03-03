@@ -6,8 +6,11 @@ body {
 }
 button {
   background-color: #521fca;
-  border-radius: 20%;
+  padding: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  color: #fff;
+  margin-right: 5px;
 }
 a {
   color: inherit;
