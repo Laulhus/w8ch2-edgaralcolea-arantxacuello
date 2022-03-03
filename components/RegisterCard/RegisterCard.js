@@ -7,12 +7,10 @@ const Register = () => {
   };
 
   const [formData, setFormData] = useState(blankForm);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const submitForm = (event) => {
     event.preventDefault();
-    dispatch(formData);
+
     navigate("/");
   };
 

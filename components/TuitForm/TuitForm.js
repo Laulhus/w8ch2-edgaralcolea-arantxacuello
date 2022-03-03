@@ -1,5 +1,5 @@
 import { useState } from "react";
-import createTuit from "../../utils/createTuit";
+import { createTuit } from "../../utils/tuitFunctions";
 
 const TuitForm = () => {
   const [tuit, setTuit] = useState({ text: "", likes: 0 });
