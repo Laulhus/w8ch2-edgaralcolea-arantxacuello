@@ -1,6 +1,5 @@
 import TuitCard from "../components/tuitCard/TuitCard";
-import deleteTuit from "../utils/deleteTuit";
-import likeTuit from "../utils/likeTuit";
+import { deleteTuit, likeTuit } from "../utils/tuitFunctions";
 
 const Home = ({ tuits }) => {
   return (
