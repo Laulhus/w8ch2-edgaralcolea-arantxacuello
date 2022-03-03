@@ -3,7 +3,7 @@ const UserCard = () => {
     <>
       <li className="list">
         <h4>Nombre:</h4>
-        <p>Empresa:</p>
+        <p>Username:</p>
         <div>
           <button>Delete</button>
         </div>
