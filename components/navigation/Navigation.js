@@ -5,13 +5,13 @@ const Navigation = () => {
     <>
       <ul className="nav">
         <li>
-
-
           <Link href="/">All Tuits</Link>
-
         </li>
         <li>
           <Link href="/tuit">Tuitea</Link>
+        </li>
+        <li>
+          <Link href="/tuiteros">Tuiteros</Link>
         </li>
       </ul>
     </>
