@@ -13,6 +13,9 @@ const Navigation = () => {
         <li>
           <Link href="/tuiteros">Tuiteros</Link>
         </li>
+        <li>
+          <Link href="/registro">Registro</Link>
+        </li>
       </ul>
     </>
   );
