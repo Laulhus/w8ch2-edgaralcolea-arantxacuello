@@ -1,4 +1,5 @@
 import deleteTuit from "../../utils/deleteTuit";
+import likeTuit from "../../utils/likeTuit";
 
 const TuitCard = ({ tuit }) => {
   const calcDate = (date) => {
@@ -15,6 +16,7 @@ const TuitCard = ({ tuit }) => {
           <p>{`Liked ${tuit.likes} times`}</p>
           <p>{`Posted ${calcDate(tuit.date)} minutes ago.`}</p>
         </div>
+        <button onClick={() => likeTuit(tuit.id)}>Like!</button>
         <button onClick={() => deleteTuit(tuit.id)}>Delete</button>
       </li>
     </>
