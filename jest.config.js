@@ -18,6 +18,7 @@ const customJestConfig = {
     "!./**/*.config.js",
     "!./**/_app.js",
     "!coverage/**",
+    "!.scannerwork/**",
   ],
 };
 
